@@ -6,6 +6,9 @@ import productsRoutes from "./routes/product.routes";
 import companyRoutes from "./routes/company.routes";
 import pedidosRoutes from "./routes/order.routes";
 import adminRoutes from "./routes/admin.routes";
+
+import confianzaRoutes from "./routes/confianza.routes"; 
+
 import { corsHandler } from "./middleware/corsHandler";
 import { loggingHandler } from "./middleware/loggingHandler";
 import { routeNotFound } from "./middleware/routeNotFound";
@@ -28,6 +31,7 @@ app.use("/api/products", productsRoutes);
 app.use("/api/company", companyRoutes);
 app.use("/api/orders", pedidosRoutes);
 app.use("/api/admins", adminRoutes);
+app.use("/api/confianza", confianzaRoutes); //Rutas de confianza, para la empresa y el usuario
 
 app.use(routeNotFound);//Middleware para informar de una ruta inexistente fuera de /users , /products ,etc.
 
